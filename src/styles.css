@@ -168,7 +168,7 @@
 }
 
 /* ---------- Typography ---------- */
-@utility font-display-xl {
+@utility display-xl {
   font-family: var(--font-display);
   font-weight: 800;
   letter-spacing: -0.035em;
