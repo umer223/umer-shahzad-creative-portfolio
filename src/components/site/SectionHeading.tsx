@@ -1,0 +1,48 @@
+import type { ReactNode } from "react";
+import { cn } from "@/lib/utils";
+import { Reveal } from "./Reveal";
+
+type Props = {
+  eyebrow: string;
+  title: ReactNode;
+  intro?: ReactNode;
+  align?: "left" | "center";
+  className?: string;
+};
+
+export function SectionHeading({ eyebrow, title, intro, align = "left", className }: Props) {
+  return (
+    <div
+      className={cn(
+        "flex flex-col gap-5",
+        align === "center" && "items-center text-center",
+        className,
+      )}
+    >
+      <Reveal>
+        <span className="eyebrow inline-flex items-center gap-3">
+          <span className="h-px w-8 bg-primary" aria-hidden />
+          {eyebrow}
+        </span>
+      </Reveal>
+      <Reveal delay={80}>
+        <h2 className="display-xl max-w-4xl text-[clamp(2.4rem,6vw,5.25rem)]">
+          {title}
+          <span className="text-primary">.</span>
+        </h2>
+      </Reveal>
+      {intro && (
+        <Reveal delay={160}>
+          <p
+            className={cn(
+              "max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg",
+              align === "center" && "mx-auto",
+            )}
+          >
+            {intro}
+          </p>
+        </Reveal>
+      )}
+    </div>
+  );
+}

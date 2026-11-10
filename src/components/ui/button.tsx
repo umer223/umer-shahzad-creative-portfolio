@@ -16,8 +16,13 @@ const buttonVariants = cva(
         secondary: "bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
+        hero: "group rounded-full bg-primary font-heading font-semibold tracking-wide text-primary-foreground transition-all duration-500 hover:-translate-y-0.5 hover:bg-primary-glow hover:shadow-glow",
+        glass:
+          "group rounded-full glass font-heading font-semibold tracking-wide text-foreground transition-all duration-500 hover:-translate-y-0.5 hover:border-primary/60 hover:text-primary",
       },
       size: {
+        pill: "h-12 pl-6 pr-1.5 text-sm",
+        pillPlain: "h-12 px-6 text-sm",
         default: "h-9 px-4 py-2",
         sm: "h-8 rounded-md px-3 text-xs",
         lg: "h-10 rounded-md px-8",
