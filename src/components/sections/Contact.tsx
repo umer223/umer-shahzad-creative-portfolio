@@ -67,7 +67,7 @@ export function Contact() {
         </Reveal>
 
         <div className="mt-16 grid gap-10 lg:grid-cols-12">
-          <div className="flex flex-col gap-6 lg:col-span-5">
+          <div className="flex min-w-0 flex-col gap-6 lg:col-span-5">
             <Reveal>
               <p className="text-base leading-relaxed text-muted-foreground md:text-lg">
                 Let's create something meaningful together. Whether you need a powerful brand
@@ -81,20 +81,20 @@ export function Contact() {
                 href={WHATSAPP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="card-surface group flex items-center gap-5 rounded-3xl p-6 transition-all duration-500 hover:border-primary/60 hover:shadow-glow"
+                className="card-surface group flex items-center gap-4 rounded-3xl p-5 sm:gap-5 sm:p-6 transition-all duration-500 hover:border-primary/60 hover:shadow-glow"
               >
                 <span className="grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-primary text-primary-foreground">
                   <MessageCircle className="h-6 w-6" />
                 </span>
-                <span className="flex-1">
+                <span className="min-w-0 flex-1">
                   <span className="block font-heading text-xs uppercase tracking-[0.2em] text-muted-foreground">
                     WhatsApp
                   </span>
-                  <span className="mt-1 block font-heading text-xl font-semibold">
+                  <span className="mt-1 block truncate font-heading text-lg font-semibold sm:text-xl">
                     {WHATSAPP_DISPLAY}
                   </span>
                 </span>
-                <span className="font-heading text-sm text-primary transition-transform duration-500 group-hover:translate-x-1">
+                <span className="hidden font-heading text-sm text-primary transition-transform sm:inline duration-500 group-hover:translate-x-1">
                   Chat →
                 </span>
               </a>
@@ -105,27 +105,27 @@ export function Contact() {
                 href={INSTAGRAM_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="card-surface group flex items-center gap-5 rounded-3xl p-6 transition-all duration-500 hover:border-primary/60 hover:shadow-glow"
+                className="card-surface group flex items-center gap-4 rounded-3xl p-5 sm:gap-5 sm:p-6 transition-all duration-500 hover:border-primary/60 hover:shadow-glow"
               >
                 <span className="grid h-14 w-14 shrink-0 place-items-center rounded-2xl border border-border bg-background text-primary">
                   <Instagram className="h-6 w-6" />
                 </span>
-                <span className="flex-1">
+                <span className="min-w-0 flex-1">
                   <span className="block font-heading text-xs uppercase tracking-[0.2em] text-muted-foreground">
                     Instagram
                   </span>
-                  <span className="mt-1 block font-heading text-xl font-semibold">
+                  <span className="mt-1 block truncate font-heading text-lg font-semibold sm:text-xl">
                     {INSTAGRAM_HANDLE}
                   </span>
                 </span>
-                <span className="font-heading text-sm text-primary transition-transform duration-500 group-hover:translate-x-1">
+                <span className="hidden font-heading text-sm text-primary transition-transform sm:inline duration-500 group-hover:translate-x-1">
                   Follow →
                 </span>
               </a>
             </Reveal>
           </div>
 
-          <Reveal delay={120} className="lg:col-span-7">
+          <Reveal delay={120} className="min-w-0 lg:col-span-7">
             <form
               noValidate
               onSubmit={onSubmit}

@@ -21,15 +21,16 @@ export function Education() {
       className="relative border-t border-border bg-surface/40 py-28 md:py-36"
     >
       <div className="mx-auto grid max-w-7xl gap-14 px-5 md:px-8 lg:grid-cols-12">
-        <div className="lg:col-span-5">
+        <div className="lg:col-span-6">
           <SectionHeading
             eyebrow="Education"
             title="Learning & Growth"
+            size="sm"
             intro="A technical foundation in Computer Science, sharpened by focused courses in design and development."
           />
         </div>
 
-        <ol className="relative lg:col-span-7">
+        <ol className="relative lg:col-span-6">
           <span className="absolute bottom-2 left-[11px] top-2 w-px bg-border" aria-hidden />
           {items.map((item, i) => (
             <Reveal

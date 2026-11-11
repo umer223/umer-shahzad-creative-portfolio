@@ -151,10 +151,10 @@ function CaseStudy() {
       </div>
 
       <section className="mx-auto max-w-7xl px-5 py-24 md:px-8">
-        <div className="grid gap-12 md:grid-cols-12">
-          <div className="md:col-span-4">
+        <div className="grid gap-12 lg:grid-cols-12">
+          <div className="lg:col-span-4">
             <Reveal>
-              <h2 className="display-xl text-4xl md:text-5xl">
+              <h2 className="display-xl text-[clamp(1.75rem,2.4vw,2.1rem)]">
                 Showcase<span className="text-primary">.</span>
               </h2>
             </Reveal>
@@ -173,7 +173,7 @@ function CaseStudy() {
             </Reveal>
           </div>
 
-          <div className="grid gap-6 md:col-span-8 sm:grid-cols-2">
+          <div className="grid gap-6 sm:grid-cols-2 lg:col-span-8">
             {project.gallery.slice(1).map((g, i) => (
               <Reveal
                 key={g.caption}
