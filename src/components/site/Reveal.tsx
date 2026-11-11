@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 type RevealProps = {
   as?: ElementType;
   delay?: number;
-  className?: string;
+  className?: string | undefined;
   children: ReactNode;
 };
 

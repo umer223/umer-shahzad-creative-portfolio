@@ -47,7 +47,8 @@ function CaseStudy() {
   const { slug } = Route.useLoaderData();
   const project = getProject(slug)!;
   const idx = projects.findIndex((p) => p.slug === slug);
-  const next = projects[(idx + 1) % projects.length];
+  const next = projects[(idx + 1) % projects.length]!;
+  const current = lightbox === null ? undefined : project.gallery[lightbox];
   const [lightbox, setLightbox] = useState<number | null>(null);
 
   useEffect(() => {
@@ -123,7 +124,7 @@ function CaseStudy() {
           type="button"
           onClick={() => setLightbox(0)}
           className="group block w-full overflow-hidden rounded-[2rem] border border-border"
-          aria-label={`Open ${project.gallery[0].caption}`}
+          aria-label={`Open ${project.gallery[0]?.caption ?? project.name}`}
         >
           <img
             src={project.cover}
@@ -204,11 +205,11 @@ function CaseStudy() {
         </Link>
       </section>
 
-      {lightbox !== null && (
+      {lightbox !== null && current && (
         <div
           role="dialog"
           aria-modal="true"
-          aria-label={project.gallery[lightbox].caption}
+          aria-label={current.caption}
           className="fixed inset-0 z-[90] flex items-center justify-center bg-background/90 p-4 backdrop-blur-xl animate-in fade-in"
           onClick={() => setLightbox(null)}
         >
@@ -222,12 +223,12 @@ function CaseStudy() {
           </button>
           <figure className="max-w-6xl" onClick={(e) => e.stopPropagation()}>
             <img
-              src={project.gallery[lightbox].src}
-              alt={project.gallery[lightbox].alt}
+              src={current.src}
+              alt={current.alt}
               className="max-h-[80vh] w-full rounded-2xl object-contain animate-in zoom-in-95"
             />
             <figcaption className="mt-4 flex items-center justify-between font-heading text-sm text-muted-foreground">
-              <span>{project.gallery[lightbox].caption}</span>
+              <span>{current.caption}</span>
               <span>
                 {lightbox + 1} / {project.gallery.length}
               </span>

@@ -19,7 +19,7 @@ describe("contact details", () => {
     });
     const link = buildWhatsAppLink(data);
     expect(link.startsWith("https://wa.me/923169249318?text=")).toBe(true);
-    const text = decodeURIComponent(link.split("?text=")[1]);
+    const text = decodeURIComponent(link.split("?text=")[1] ?? "");
     expect(text).toContain("Name: Sara");
     expect(text).toContain("Project type: Website Design");
   });
