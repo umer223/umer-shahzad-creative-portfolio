@@ -22,7 +22,9 @@ export function CursorFollower() {
       x = e.clientX;
       y = e.clientY;
       el.style.opacity = "1";
-      const interactive = (e.target as HTMLElement | null)?.closest("a, button, [role=button], input, select, textarea");
+      const interactive = (e.target as HTMLElement | null)?.closest(
+        "a, button, [role=button], input, select, textarea",
+      );
       target = interactive ? 2.2 : 1;
     };
     const leave = () => (el.style.opacity = "0");

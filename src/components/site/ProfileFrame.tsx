@@ -28,7 +28,7 @@ export function ProfileFrame({ src, className, priority }: Props) {
           <div className="noise relative flex h-full w-full flex-col items-center justify-center overflow-hidden">
             <div className="glow-orb absolute left-1/2 top-1/3 h-2/3 w-2/3 -translate-x-1/2 animate-float-slow" />
             <div className="grid-lines absolute inset-0 opacity-50" />
-            <span className="display-xl text-outline relative text-[clamp(6rem,14vw,11rem)] leading-none">
+            <span className="display-xl text-outline relative text-[clamp(4.5rem,9vw,8rem)] leading-none">
               US
             </span>
             <span className="relative mt-4 font-heading text-xs uppercase tracking-[0.3em] text-muted-foreground">

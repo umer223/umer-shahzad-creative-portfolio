@@ -7,10 +7,18 @@ type Props = {
   title: ReactNode;
   intro?: ReactNode;
   align?: "left" | "center";
+  size?: "lg" | "sm";
   className?: string;
 };
 
-export function SectionHeading({ eyebrow, title, intro, align = "left", className }: Props) {
+export function SectionHeading({
+  eyebrow,
+  title,
+  intro,
+  align = "left",
+  size = "lg",
+  className,
+}: Props) {
   return (
     <div
       className={cn(
@@ -26,7 +34,12 @@ export function SectionHeading({ eyebrow, title, intro, align = "left", classNam
         </span>
       </Reveal>
       <Reveal delay={80}>
-        <h2 className="display-xl max-w-4xl text-[clamp(2.4rem,6vw,5.25rem)]">
+        <h2
+          className={cn(
+            "display-xl max-w-4xl",
+            size === "lg" ? "text-[clamp(2rem,5vw,4.25rem)]" : "text-[clamp(2rem,3.6vw,3.25rem)]",
+          )}
+        >
           {title}
           <span className="text-primary">.</span>
         </h2>

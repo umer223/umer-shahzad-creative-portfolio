@@ -15,3 +15,12 @@ describe("App routing", () => {
     expect(matches.at(-1)?.routeId).not.toBe(rootRouteId);
   });
 });
+
+describe("Project pages", () => {
+  it("matches a case study page for each featured project", () => {
+    const router = createRouter({ routeTree, context: { queryClient: new QueryClient() } });
+    for (const slug of ["crazy-bite", "gelani-mart", "rehman-hotel", "rms-beauty-cream"]) {
+      expect(router.matchRoutes(`/work/${slug}`).at(-1)?.routeId).toBe("/work/$slug");
+    }
+  });
+});

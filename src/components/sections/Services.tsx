@@ -14,13 +14,41 @@ import { Reveal } from "@/components/site/Reveal";
 import { SectionHeading } from "@/components/site/SectionHeading";
 
 const services: { title: string; text: string; icon: LucideIcon }[] = [
-  { title: "Graphic Design", text: "Creative and professional visual communication for businesses.", icon: PenTool },
-  { title: "Logo & Brand Identity", text: "Unique visual identities that create memorable brand experiences.", icon: Shapes },
-  { title: "Social Media Post Design", text: "Engaging, consistent and premium social media creatives.", icon: Megaphone },
-  { title: "Social Media Management", text: "Content planning, creative management and social media presence.", icon: CalendarRange },
-  { title: "Website Design", text: "Modern, responsive and visually appealing website experiences.", icon: LayoutTemplate },
-  { title: "Website Development", text: "Functional, responsive and professional website development.", icon: Code2 },
-  { title: "Video Editing", text: "Creative video editing for promotional, social media and marketing content.", icon: Clapperboard },
+  {
+    title: "Graphic Design",
+    text: "Creative and professional visual communication for businesses.",
+    icon: PenTool,
+  },
+  {
+    title: "Logo & Brand Identity",
+    text: "Unique visual identities that create memorable brand experiences.",
+    icon: Shapes,
+  },
+  {
+    title: "Social Media Post Design",
+    text: "Engaging, consistent and premium social media creatives.",
+    icon: Megaphone,
+  },
+  {
+    title: "Social Media Management",
+    text: "Content planning, creative management and social media presence.",
+    icon: CalendarRange,
+  },
+  {
+    title: "Website Design",
+    text: "Modern, responsive and visually appealing website experiences.",
+    icon: LayoutTemplate,
+  },
+  {
+    title: "Website Development",
+    text: "Functional, responsive and professional website development.",
+    icon: Code2,
+  },
+  {
+    title: "Video Editing",
+    text: "Creative video editing for promotional, social media and marketing content.",
+    icon: Clapperboard,
+  },
 ];
 
 export function Services() {
@@ -61,7 +89,7 @@ export function Services() {
                 Start a project
               </span>
               <div>
-                <p className="display-xl text-4xl">Let's talk about your idea</p>
+                <p className="display-xl text-[1.75rem]">Let's talk about your idea</p>
                 <span className="mt-6 inline-flex items-center font-heading text-sm font-semibold">
                   Get in touch
                   <ArrowCircle />

@@ -45,7 +45,11 @@ export const projects: Project[] = [
     cover: crazyBiteCover,
     gallery: [
       { src: crazyBiteCover, alt: "Takeaway packaging mockup", caption: "Packaging & branding" },
-      { src: crazyBiteSocial, alt: "Social media grid on a phone", caption: "Social media designs" },
+      {
+        src: crazyBiteSocial,
+        alt: "Social media grid on a phone",
+        caption: "Social media designs",
+      },
       { src: crazyBiteWebsite, alt: "Restaurant website on a laptop", caption: "Website" },
     ],
   },
@@ -67,7 +71,11 @@ export const projects: Project[] = [
     gallery: [
       { src: gelaniCover, alt: "Retail bags and cards mockup", caption: "Identity applications" },
       { src: gelaniSignage, alt: "Storefront signage mockup", caption: "Storefront signage" },
-      { src: gelaniStationery, alt: "Stationery and colour swatches", caption: "Colours & stationery" },
+      {
+        src: gelaniStationery,
+        alt: "Stationery and colour swatches",
+        caption: "Colours & stationery",
+      },
     ],
   },
   {
@@ -87,7 +95,11 @@ export const projects: Project[] = [
     cover: rehmanCover,
     gallery: [
       { src: rehmanCover, alt: "Hotel website on laptop and phone", caption: "Digital presence" },
-      { src: rehmanSocial, alt: "Hotel social media posts on phones", caption: "Social media creatives" },
+      {
+        src: rehmanSocial,
+        alt: "Hotel social media posts on phones",
+        caption: "Social media creatives",
+      },
       { src: rehmanWebsite, alt: "Hotel website on a monitor", caption: "Website" },
     ],
   },
