@@ -139,7 +139,7 @@ export function Contact() {
                   id="projectType"
                   name="projectType"
                   defaultValue=""
-                  className={cn(fieldClass, "appearance-none bg-[length:16px] pr-10", errors.projectType && "border-destructive")}
+                  className={cn(fieldClass, "appearance-none pr-10", errors.projectType && "border-destructive")}
                 >
                   <option value="" disabled>
                     Select a service
