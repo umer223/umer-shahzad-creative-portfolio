@@ -28,3 +28,9 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+## Project rules
+
+- Portfolio content (projects, contact constants) lives in `src/data/` and `src/lib/contact.ts`; sections read from there so copy changes happen in one place.
+- Home is one scrolling page of sections (`src/components/sections/`) linked by hash; each project gets its own `/work/$slug` route for shareable case-study metadata.
+- The contact form has no backend: it validates with zod and opens WhatsApp with the enquiry pre-filled, because no email address exists to send to.

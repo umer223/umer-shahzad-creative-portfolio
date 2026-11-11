@@ -151,7 +151,7 @@ function RootComponent() {
       </main>
       <Footer />
       <CursorFollower />
-      <Toaster position="bottom-center" />
+      <Toaster position="bottom-center" theme="dark" />
     </QueryClientProvider>
   );
 }
