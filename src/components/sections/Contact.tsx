@@ -1,4 +1,4 @@
-import { Instagram, MessageCircle, Send } from "lucide-react";
+import { ChevronDown, Instagram, MessageCircle, Send } from "lucide-react";
 import { useState, type FormEvent } from "react";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
@@ -135,6 +135,7 @@ export function Contact() {
               </div>
 
               <Field label="Project type" error={errors.projectType} htmlFor="projectType" className="mt-5">
+                <div className="relative">
                 <select
                   id="projectType"
                   name="projectType"
@@ -150,6 +151,8 @@ export function Contact() {
                     </option>
                   ))}
                 </select>
+                <ChevronDown className="pointer-events-none absolute right-4 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" aria-hidden />
+                </div>
               </Field>
 
               <Field label="Message" error={errors.message} htmlFor="message" className="mt-5">
