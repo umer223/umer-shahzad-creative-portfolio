@@ -103,7 +103,7 @@ function CaseStudy() {
           )}
         </div>
 
-        <h1 className="display-xl mt-6 text-[clamp(3.2rem,11vw,10rem)]">
+        <h1 className="display-xl mt-6 text-[clamp(2.6rem,9vw,8rem)]">
           <span className="intro-line">
             <span>
               {project.name}

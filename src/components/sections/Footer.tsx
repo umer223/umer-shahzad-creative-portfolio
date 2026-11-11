@@ -49,7 +49,7 @@ export function Footer() {
         </div>
 
         <p
-          className="display-xl mt-16 select-none whitespace-nowrap text-[clamp(3rem,13.5vw,12.5rem)] leading-none text-foreground/95"
+          className="display-xl mt-16 select-none text-[clamp(2.5rem,6.4vw,5rem)] leading-none text-foreground/95"
           aria-hidden
         >
           Umer Shahzad<span className="text-primary">.</span>

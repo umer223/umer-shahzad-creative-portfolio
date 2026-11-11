@@ -24,13 +24,13 @@ export function Skills() {
         <ul className="mt-16 border-t border-border">
           {skills.map((s, i) => (
             <Reveal as="li" key={s.name} delay={i * 60}>
-              <div className="group relative flex items-center gap-6 overflow-hidden border-b border-border py-7 md:gap-10 md:py-9">
+              <div className="group relative flex items-center gap-4 overflow-hidden border-b border-border py-7 md:gap-10 md:py-9">
                 <span
                   className="absolute inset-0 -z-10 origin-left scale-x-0 bg-gradient-to-r from-primary/15 via-primary/5 to-transparent transition-transform duration-700 ease-out group-hover:scale-x-100"
                   aria-hidden
                 />
-                <span className="w-10 font-heading text-sm text-primary">0{i + 1}</span>
-                <span className="display-xl flex-1 text-[clamp(1.6rem,4.5vw,3.75rem)] transition-transform duration-500 group-hover:translate-x-3">
+                <span className="w-8 shrink-0 font-heading text-sm text-primary">0{i + 1}</span>
+                <span className="display-xl flex-1 text-[clamp(1.15rem,4vw,3.25rem)] transition-transform duration-500 group-hover:translate-x-3">
                   {s.name}
                 </span>
                 <span className="hidden font-heading text-sm text-muted-foreground md:block">

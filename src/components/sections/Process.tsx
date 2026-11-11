@@ -40,7 +40,7 @@ export function Process() {
                 <span className="absolute left-0 top-0 grid h-14 w-14 place-items-center rounded-full border border-border bg-background font-heading text-sm font-semibold text-primary transition-all duration-500 group-hover:border-primary group-hover:bg-primary group-hover:text-primary-foreground group-hover:shadow-glow lg:relative">
                   0{i + 1}
                 </span>
-                <h3 className="display-xl mt-0 text-2xl lg:mt-8 lg:text-3xl">{s.title}</h3>
+                <h3 className="display-xl mt-0 text-2xl lg:mt-8 lg:text-xl xl:text-2xl">{s.title}</h3>
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{s.text}</p>
               </Reveal>
             ))}

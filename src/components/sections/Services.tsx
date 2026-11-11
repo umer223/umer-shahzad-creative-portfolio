@@ -89,7 +89,7 @@ export function Services() {
                 Start a project
               </span>
               <div>
-                <p className="display-xl text-4xl">Let's talk about your idea</p>
+                <p className="display-xl text-[1.75rem]">Let's talk about your idea</p>
                 <span className="mt-6 inline-flex items-center font-heading text-sm font-semibold">
                   Get in touch
                   <ArrowCircle />

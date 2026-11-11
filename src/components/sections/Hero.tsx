@@ -44,7 +44,7 @@ export function Hero() {
             </span>
           </div>
 
-          <h1 className="display-xl mt-8 text-[clamp(3.6rem,10.5vw,9.5rem)]">
+          <h1 className="display-xl mt-8 text-[clamp(2.5rem,10.5vw,5rem)] lg:text-[min(5.6vw,5.1rem)]">
             <span className="intro-line">
               <span style={d(120)}>Umer</span>
             </span>

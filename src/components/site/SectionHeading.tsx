@@ -26,7 +26,7 @@ export function SectionHeading({ eyebrow, title, intro, align = "left", classNam
         </span>
       </Reveal>
       <Reveal delay={80}>
-        <h2 className="display-xl max-w-4xl text-[clamp(2.4rem,6vw,5.25rem)]">
+        <h2 className="display-xl max-w-4xl text-[clamp(2rem,5vw,4.25rem)]">
           {title}
           <span className="text-primary">.</span>
         </h2>

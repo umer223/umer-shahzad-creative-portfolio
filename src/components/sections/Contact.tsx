@@ -60,7 +60,7 @@ export function Contact() {
           </span>
         </Reveal>
         <Reveal delay={80}>
-          <h2 className="display-xl mt-5 text-[clamp(3rem,9vw,8.5rem)]">
+          <h2 className="display-xl mt-5 text-[clamp(2.2rem,6.4vw,5.75rem)]">
             Have a Project <br className="hidden sm:block" />
             in Mind<span className="text-primary">?</span>
           </h2>
