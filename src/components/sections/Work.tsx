@@ -24,7 +24,10 @@ export function ProjectCard({ project, delay = 0 }: { project: Project; delay?: 
             className="h-full w-full scale-[1.02] object-cover transition-transform duration-[1.4s] ease-out group-hover:scale-110"
           />
           <div className="bg-fade-b absolute inset-0" aria-hidden />
-          <div className="absolute inset-0 bg-background/0 transition-colors duration-700 group-hover:bg-background/30" aria-hidden />
+          <div
+            className="absolute inset-0 bg-background/0 transition-colors duration-700 group-hover:bg-background/30"
+            aria-hidden
+          />
 
           <div className="absolute inset-x-5 top-5 flex items-start justify-between gap-3 md:inset-x-7 md:top-7">
             <span className="rounded-full glass px-3 py-1.5 font-heading text-xs uppercase tracking-[0.15em]">
@@ -65,8 +68,8 @@ export function Work() {
           <SectionHeading eyebrow="Featured work" title="Selected Projects" />
           <Reveal>
             <p className="max-w-sm text-sm leading-relaxed text-muted-foreground">
-              Branding, social media and websites for businesses across food, retail, hospitality and
-              beauty. Open a project to see the full case study.
+              Branding, social media and websites for businesses across food, retail, hospitality
+              and beauty. Open a project to see the full case study.
             </p>
           </Reveal>
         </div>

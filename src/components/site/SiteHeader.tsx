@@ -83,7 +83,9 @@ export function SiteHeader() {
                 hash={item.id}
                 className={cn(
                   "relative rounded-full px-4 py-2 font-heading text-sm transition-colors",
-                  active === item.id ? "text-foreground" : "text-muted-foreground hover:text-foreground",
+                  active === item.id
+                    ? "text-foreground"
+                    : "text-muted-foreground hover:text-foreground",
                 )}
               >
                 {active === item.id && (
@@ -119,7 +121,9 @@ export function SiteHeader() {
         id="mobile-menu"
         className={cn(
           "fixed inset-x-4 top-24 rounded-3xl glass p-6 shadow-soft transition-all duration-500 lg:hidden",
-          open ? "pointer-events-auto translate-y-0 opacity-100" : "pointer-events-none -translate-y-4 opacity-0",
+          open
+            ? "pointer-events-auto translate-y-0 opacity-100"
+            : "pointer-events-none -translate-y-4 opacity-0",
         )}
       >
         <ul className="flex flex-col">

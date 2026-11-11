@@ -47,7 +47,10 @@ export function Contact() {
   return (
     <section id="contact" className="relative overflow-hidden py-28 md:py-36">
       <div className="grid-lines absolute inset-0 -z-10 opacity-50" aria-hidden />
-      <div className="glow-orb absolute -bottom-40 left-1/2 -z-10 h-[36rem] w-[50rem] -translate-x-1/2" aria-hidden />
+      <div
+        className="glow-orb absolute -bottom-40 left-1/2 -z-10 h-[36rem] w-[50rem] -translate-x-1/2"
+        aria-hidden
+      />
 
       <div className="mx-auto max-w-7xl px-5 md:px-8">
         <Reveal>
@@ -68,8 +71,8 @@ export function Contact() {
             <Reveal>
               <p className="text-base leading-relaxed text-muted-foreground md:text-lg">
                 Let's create something meaningful together. Whether you need a powerful brand
-                identity, engaging social media designs or a professional website, I'm ready to bring
-                your ideas to life.
+                identity, engaging social media designs or a professional website, I'm ready to
+                bring your ideas to life.
               </p>
             </Reveal>
 
@@ -87,7 +90,9 @@ export function Contact() {
                   <span className="block font-heading text-xs uppercase tracking-[0.2em] text-muted-foreground">
                     WhatsApp
                   </span>
-                  <span className="mt-1 block font-heading text-xl font-semibold">{WHATSAPP_DISPLAY}</span>
+                  <span className="mt-1 block font-heading text-xl font-semibold">
+                    {WHATSAPP_DISPLAY}
+                  </span>
                 </span>
                 <span className="font-heading text-sm text-primary transition-transform duration-500 group-hover:translate-x-1">
                   Chat →
@@ -109,7 +114,9 @@ export function Contact() {
                   <span className="block font-heading text-xs uppercase tracking-[0.2em] text-muted-foreground">
                     Instagram
                   </span>
-                  <span className="mt-1 block font-heading text-xl font-semibold">{INSTAGRAM_HANDLE}</span>
+                  <span className="mt-1 block font-heading text-xl font-semibold">
+                    {INSTAGRAM_HANDLE}
+                  </span>
                 </span>
                 <span className="font-heading text-sm text-primary transition-transform duration-500 group-hover:translate-x-1">
                   Follow →
@@ -127,31 +134,58 @@ export function Contact() {
             >
               <div className="grid gap-5 sm:grid-cols-2">
                 <Field label="Your name" error={errors.name} htmlFor="name">
-                  <input id="name" name="name" autoComplete="name" maxLength={100} placeholder="Full name" className={cn(fieldClass, errors.name && "border-destructive")} />
+                  <input
+                    id="name"
+                    name="name"
+                    autoComplete="name"
+                    maxLength={100}
+                    placeholder="Full name"
+                    className={cn(fieldClass, errors.name && "border-destructive")}
+                  />
                 </Field>
                 <Field label="Email" error={errors.email} htmlFor="email">
-                  <input id="email" name="email" type="email" autoComplete="email" maxLength={255} placeholder="you@company.com" className={cn(fieldClass, errors.email && "border-destructive")} />
+                  <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    autoComplete="email"
+                    maxLength={255}
+                    placeholder="you@company.com"
+                    className={cn(fieldClass, errors.email && "border-destructive")}
+                  />
                 </Field>
               </div>
 
-              <Field label="Project type" error={errors.projectType} htmlFor="projectType" className="mt-5">
+              <Field
+                label="Project type"
+                error={errors.projectType}
+                htmlFor="projectType"
+                className="mt-5"
+              >
                 <div className="relative">
-                <select
-                  id="projectType"
-                  name="projectType"
-                  defaultValue=""
-                  className={cn(fieldClass, "appearance-none pr-10", errors.projectType && "border-destructive")}
-                >
-                  <option value="" disabled>
-                    Select a service
-                  </option>
-                  {projectTypes.map((t) => (
-                    <option key={t} value={t} className="bg-surface">
-                      {t}
+                  <select
+                    id="projectType"
+                    name="projectType"
+                    defaultValue=""
+                    className={cn(
+                      fieldClass,
+                      "appearance-none pr-10",
+                      errors.projectType && "border-destructive",
+                    )}
+                  >
+                    <option value="" disabled>
+                      Select a service
                     </option>
-                  ))}
-                </select>
-                <ChevronDown className="pointer-events-none absolute right-4 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" aria-hidden />
+                    {projectTypes.map((t) => (
+                      <option key={t} value={t} className="bg-surface">
+                        {t}
+                      </option>
+                    ))}
+                  </select>
+                  <ChevronDown
+                    className="pointer-events-none absolute right-4 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground"
+                    aria-hidden
+                  />
                 </div>
               </Field>
 
@@ -200,7 +234,10 @@ function Field({
 }) {
   return (
     <div className={className}>
-      <label htmlFor={htmlFor} className="mb-2 block font-heading text-xs uppercase tracking-[0.18em] text-muted-foreground">
+      <label
+        htmlFor={htmlFor}
+        className="mb-2 block font-heading text-xs uppercase tracking-[0.18em] text-muted-foreground"
+      >
         {label}
       </label>
       {children}

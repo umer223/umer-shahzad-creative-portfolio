@@ -15,7 +15,12 @@ export const Route = createFileRoute("/work/$slug")({
   head: ({ loaderData }) => {
     const project = loaderData ? getProject(loaderData.slug) : undefined;
     if (!project) {
-      return { meta: [{ title: "Project not found — Umer Shahzad" }, { name: "robots", content: "noindex" }] };
+      return {
+        meta: [
+          { title: "Project not found — Umer Shahzad" },
+          { name: "robots", content: "noindex" },
+        ],
+      };
     }
     const title = `${project.name} — ${project.category} Case Study | Umer Shahzad`;
     return {
@@ -32,7 +37,9 @@ export const Route = createFileRoute("/work/$slug")({
   component: CaseStudy,
   notFoundComponent: () => (
     <div className="mx-auto flex min-h-[70vh] max-w-xl flex-col items-center justify-center px-5 text-center">
-      <h1 className="display-xl text-5xl">Project not found<span className="text-primary">.</span></h1>
+      <h1 className="display-xl text-5xl">
+        Project not found<span className="text-primary">.</span>
+      </h1>
       <Button asChild variant="hero" size="pill" className="mt-8">
         <Link to="/" hash="work">
           Back to work
@@ -48,16 +55,19 @@ function CaseStudy() {
   const project = getProject(slug)!;
   const idx = projects.findIndex((p) => p.slug === slug);
   const next = projects[(idx + 1) % projects.length]!;
-  const current = lightbox === null ? undefined : project.gallery[lightbox];
   const [lightbox, setLightbox] = useState<number | null>(null);
+  const current = lightbox === null ? undefined : project.gallery[lightbox];
 
   useEffect(() => {
     if (lightbox === null) return;
     const onKey = (e: KeyboardEvent) => {
       if (e.key === "Escape") setLightbox(null);
-      if (e.key === "ArrowRight") setLightbox((i) => (i === null ? i : (i + 1) % project.gallery.length));
+      if (e.key === "ArrowRight")
+        setLightbox((i) => (i === null ? i : (i + 1) % project.gallery.length));
       if (e.key === "ArrowLeft")
-        setLightbox((i) => (i === null ? i : (i - 1 + project.gallery.length) % project.gallery.length));
+        setLightbox((i) =>
+          i === null ? i : (i - 1 + project.gallery.length) % project.gallery.length,
+        );
     };
     window.addEventListener("keydown", onKey);
     document.body.style.overflow = "hidden";
@@ -83,7 +93,9 @@ function CaseStudy() {
 
         <div className="mt-10 flex flex-wrap items-center gap-3">
           <span className="eyebrow">Project {project.index}</span>
-          <span className="rounded-full glass px-3 py-1 font-heading text-xs">{project.category}</span>
+          <span className="rounded-full glass px-3 py-1 font-heading text-xs">
+            {project.category}
+          </span>
           {project.clientType && (
             <span className="rounded-full border border-primary/50 px-3 py-1 font-heading text-xs text-primary">
               {project.clientType}
@@ -101,7 +113,9 @@ function CaseStudy() {
         </h1>
 
         <div className="mt-12 grid gap-10 border-t border-border pt-10 md:grid-cols-12">
-          <p className="font-heading text-xl leading-snug md:col-span-7 md:text-2xl">{project.summary}</p>
+          <p className="font-heading text-xl leading-snug md:col-span-7 md:text-2xl">
+            {project.summary}
+          </p>
           <dl className="grid grid-cols-2 gap-6 md:col-span-5">
             <div>
               <dt className="eyebrow">Services</dt>
@@ -147,7 +161,10 @@ function CaseStudy() {
             <Reveal delay={80}>
               <ul className="mt-8 space-y-3">
                 {project.showcase.map((s, i) => (
-                  <li key={s} className="flex items-center gap-4 border-b border-border pb-3 font-heading text-sm">
+                  <li
+                    key={s}
+                    className="flex items-center gap-4 border-b border-border pb-3 font-heading text-sm"
+                  >
                     <span className="text-primary">0{i + 1}</span>
                     {s}
                   </li>
@@ -158,7 +175,11 @@ function CaseStudy() {
 
           <div className="grid gap-6 md:col-span-8 sm:grid-cols-2">
             {project.gallery.slice(1).map((g, i) => (
-              <Reveal key={g.caption} delay={i * 120} className={i === 0 ? "sm:col-span-2" : undefined}>
+              <Reveal
+                key={g.caption}
+                delay={i * 120}
+                className={i === 0 ? "sm:col-span-2" : undefined}
+              >
                 <button
                   type="button"
                   onClick={() => setLightbox(i + 1)}
@@ -183,7 +204,8 @@ function CaseStudy() {
           </div>
         </div>
         <p className="mt-10 text-xs text-muted-foreground">
-          Images on this page are presentation mockups for illustration, not final client deliverables.
+          Images on this page are presentation mockups for illustration, not final client
+          deliverables.
         </p>
       </section>
 

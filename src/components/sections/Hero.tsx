@@ -33,7 +33,10 @@ export function Hero() {
         <div className="lg:col-span-7">
           <div className="intro-fade flex flex-wrap items-center gap-3" style={d(0)}>
             <span className="inline-flex items-center gap-2 rounded-full glass px-3 py-1.5 font-heading text-xs text-foreground">
-              <span className="relative h-2 w-2 rounded-full bg-success animate-pulse-dot" aria-hidden />
+              <span
+                className="relative h-2 w-2 rounded-full bg-success animate-pulse-dot"
+                aria-hidden
+              />
               Available for new projects
             </span>
             <span className="font-heading text-xs uppercase tracking-[0.25em] text-muted-foreground">
@@ -56,8 +59,8 @@ export function Hero() {
             className="intro-fade mt-6 font-heading text-sm uppercase tracking-[0.18em] text-primary md:text-base"
             style={d(450)}
           >
-            Graphic Designer <span className="text-muted-foreground">|</span> Brand Identity Designer{" "}
-            <span className="text-muted-foreground">|</span> Website Developer
+            Graphic Designer <span className="text-muted-foreground">|</span> Brand Identity
+            Designer <span className="text-muted-foreground">|</span> Website Developer
           </p>
 
           <p
@@ -96,7 +99,10 @@ export function Hero() {
         <div className="intro-fade relative lg:col-span-5" style={d(400)}>
           <ProfileFrame className="aspect-[4/5] w-full max-w-md lg:ml-auto" priority />
           {/* Rotating badge */}
-          <div className="absolute -left-4 top-10 hidden h-32 w-32 sm:block lg:-left-10" aria-hidden>
+          <div
+            className="absolute -left-4 top-10 hidden h-32 w-32 sm:block lg:-left-10"
+            aria-hidden
+          >
             <svg viewBox="0 0 120 120" className="h-full w-full animate-spin-slow">
               <defs>
                 <path id="badge-circle" d="M60,60 m-46,0 a46,46 0 1,1 92,0 a46,46 0 1,1 -92,0" />
