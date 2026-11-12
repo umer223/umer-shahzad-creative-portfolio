@@ -11,7 +11,7 @@ export const projectTypes = [
   "Social Media Post Design",
   "Social Media Management",
   "Website Design",
-  "Website Development",
+  "Web Development",
   "Video Editing",
   "Something else",
 ] as const;
@@ -29,7 +29,7 @@ export const contactSchema = z.object({
 
 export type ContactInput = z.infer<typeof contactSchema>;
 
-/** Builds a WhatsApp deep link with the enquiry pre-filled. */
+/** Builds a WhatsApp deep link with the inquiry pre-filled. */
 export function buildWhatsAppLink(data: ContactInput) {
   const text = [
     `Hi Umer, I'd like to discuss a project.`,

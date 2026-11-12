@@ -32,9 +32,9 @@ export const projects: Project[] = [
     index: "01",
     name: "Crazy Bite",
     category: "Fast Food Restaurant",
-    services: ["Brand Identity Design", "Website Development"],
+    services: ["Brand Identity Design", "Web Development"],
     summary:
-      "A bold, appetite-driven identity and website for a fast food restaurant — built to feel loud, warm and instantly recognisable across packaging, social and the web.",
+      "A bold, appetite-driven identity and website for a fast food restaurant — built to feel loud, warm and instantly recognizable across packaging, social and the web.",
     showcase: [
       "Logo and visual identity",
       "Restaurant branding",
@@ -60,10 +60,10 @@ export const projects: Project[] = [
     category: "Retail / Mart",
     services: ["Brand Identity Design"],
     summary:
-      "A clean, trustworthy retail identity system — logo, colours and typography designed to work everywhere from storefront signage to shopping bags and receipts.",
+      "A clean, trustworthy retail identity system — logo, colors and typography designed to work everywhere from storefront signage to shopping bags and receipts.",
     showcase: [
       "Logo presentation",
-      "Brand colours and typography",
+      "Brand colors and typography",
       "Visual identity applications",
       "Realistic brand mockups",
     ],
@@ -73,8 +73,8 @@ export const projects: Project[] = [
       { src: gelaniSignage, alt: "Storefront signage mockup", caption: "Storefront signage" },
       {
         src: gelaniStationery,
-        alt: "Stationery and colour swatches",
-        caption: "Colours & stationery",
+        alt: "Stationery and color swatches",
+        caption: "Colors & stationery",
       },
     ],
   },
@@ -83,7 +83,7 @@ export const projects: Project[] = [
     index: "03",
     name: "Rehman Hotel",
     category: "Hospitality",
-    services: ["Social Media Management", "Website Development"],
+    services: ["Social Media Management", "Web Development"],
     summary:
       "A refined digital presence for a hotel — consistent social media creatives paired with a website that presents rooms and hospitality with warmth and clarity.",
     showcase: [

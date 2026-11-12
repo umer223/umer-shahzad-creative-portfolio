@@ -10,7 +10,7 @@ describe("contact details", () => {
     expect(INSTAGRAM_URL).toBe("https://www.instagram.com/creative.by.umer06/");
   });
 
-  it("sends a valid enquiry to WhatsApp with the details pre-filled", () => {
+  it("sends a valid inquiry to WhatsApp with the details pre-filled", () => {
     const data = contactSchema.parse({
       name: "Sara",
       email: "sara@example.com",

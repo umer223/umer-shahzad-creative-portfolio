@@ -40,7 +40,7 @@ const services: { title: string; text: string; icon: LucideIcon }[] = [
     icon: LayoutTemplate,
   },
   {
-    title: "Website Development",
+    title: "Web Development",
     text: "Functional, responsive and professional website development.",
     icon: Code2,
   },

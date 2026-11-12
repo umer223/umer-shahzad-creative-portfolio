@@ -8,7 +8,7 @@ const skills = [
   { name: "Social Media Design", note: "Posts & campaigns" },
   { name: "Video Editing", note: "Promo & social video" },
   { name: "Website Design", note: "Layouts & interfaces" },
-  { name: "Website Development", note: "Responsive builds" },
+  { name: "Web Development", note: "Responsive builds" },
 ];
 
 export function Skills() {
