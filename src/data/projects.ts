@@ -1,6 +1,7 @@
 import crazyBiteCover from "@/assets/work/crazy-bite-cover.jpg";
 import crazyBiteSocial from "@/assets/work/crazy-bite-social.jpg";
 import crazyBiteWebsite from "@/assets/work/crazy-bite-website.jpg";
+import gelaniBoard from "@/assets/work/gelani-mart-brand-identity-board.png.asset.json";
 import gelaniCover from "@/assets/work/gelani-mart-cover.jpg";
 import gelaniSignage from "@/assets/work/gelani-mart-signage.jpg";
 import gelaniStationery from "@/assets/work/gelani-mart-stationery.jpg";
@@ -11,7 +12,8 @@ import rmsCover from "@/assets/work/rms-beauty-cover.jpg";
 import rmsSocial from "@/assets/work/rms-beauty-social.jpg";
 import rmsPackaging from "@/assets/work/rms-beauty-packaging.jpg";
 
-export type GalleryImage = { src: string; alt: string; caption: string };
+/** `real` marks an actual client deliverable, as opposed to an illustrative mockup. */
+export type GalleryImage = { src: string; alt: string; caption: string; real?: boolean };
 
 export type Project = {
   slug: string;
@@ -23,6 +25,8 @@ export type Project = {
   summary: string;
   showcase: string[];
   cover: string;
+  /** A tall cover (e.g. a full brand board): cards crop from the top, the case study shows it whole. */
+  coverPortrait?: boolean;
   gallery: GalleryImage[];
 };
 
@@ -67,8 +71,15 @@ export const projects: Project[] = [
       "Visual identity applications",
       "Realistic brand mockups",
     ],
-    cover: gelaniCover,
+    cover: gelaniBoard.url,
+    coverPortrait: true,
     gallery: [
+      {
+        src: gelaniBoard.url,
+        alt: "Gelani Mart brand identity board with logo system, color palette, typography, brand personality and pattern elements",
+        caption: "Brand identity board",
+        real: true,
+      },
       { src: gelaniCover, alt: "Retail bags and cards mockup", caption: "Identity applications" },
       { src: gelaniSignage, alt: "Storefront signage mockup", caption: "Storefront signage" },
       {
@@ -126,5 +137,7 @@ export const projects: Project[] = [
     ],
   },
 ];
+
+export const hasRealWork = (p: Project) => p.gallery.some((g) => g.real);
 
 export const getProject = (slug: string) => projects.find((p) => p.slug === slug);

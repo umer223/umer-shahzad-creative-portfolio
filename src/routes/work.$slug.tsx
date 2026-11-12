@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowCircle } from "@/components/site/ArrowCircle";
 import { Reveal } from "@/components/site/Reveal";
-import { getProject, projects } from "@/data/projects";
+import { getProject, hasRealWork, projects } from "@/data/projects";
 
 export const Route = createFileRoute("/work/$slug")({
   loader: ({ params }) => {
@@ -140,13 +140,27 @@ function CaseStudy() {
           className="group block w-full overflow-hidden rounded-[2rem] border border-border"
           aria-label={`Open ${project.gallery[0]?.caption ?? project.name}`}
         >
-          <img
-            src={project.cover}
-            alt={`${project.name} presentation mockup`}
-            width={1536}
-            height={960}
-            className="aspect-[16/9] w-full object-cover transition-transform duration-[1.4s] group-hover:scale-105"
-          />
+          {project.coverPortrait ? (
+            <span className="relative flex aspect-[4/5] w-full items-center justify-center overflow-hidden bg-surface p-4 sm:aspect-[16/9] md:p-8">
+              <span className="glow-orb absolute inset-1/4" aria-hidden />
+              <img
+                src={project.cover}
+                alt={project.gallery[0]?.alt ?? `${project.name} brand identity`}
+                className="relative h-full w-auto max-w-full rounded-2xl object-contain shadow-soft transition-transform duration-[1.4s] group-hover:scale-[1.03]"
+              />
+              <span className="absolute bottom-4 left-4 rounded-full bg-primary px-3 py-1.5 font-heading text-xs font-semibold uppercase tracking-[0.15em] text-primary-foreground">
+                Real work · Tap to enlarge
+              </span>
+            </span>
+          ) : (
+            <img
+              src={project.cover}
+              alt={`${project.name} presentation mockup`}
+              width={1536}
+              height={960}
+              className="aspect-[16/9] w-full object-cover transition-transform duration-[1.4s] group-hover:scale-105"
+            />
+          )}
         </button>
       </div>
 
@@ -204,8 +218,9 @@ function CaseStudy() {
           </div>
         </div>
         <p className="mt-10 text-xs text-muted-foreground">
-          Images on this page are presentation mockups for illustration, not final client
-          deliverables.
+          {hasRealWork(project)
+            ? "Images marked “Real work” are actual client designs; the rest are presentation mockups for illustration."
+            : "Images on this page are presentation mockups for illustration, not final client deliverables."}
         </p>
       </section>
 

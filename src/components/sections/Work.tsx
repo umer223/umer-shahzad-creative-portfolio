@@ -2,7 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { ArrowUpRight } from "lucide-react";
 import { Reveal } from "@/components/site/Reveal";
 import { SectionHeading } from "@/components/site/SectionHeading";
-import { projects, type Project } from "@/data/projects";
+import { hasRealWork, projects, type Project } from "@/data/projects";
 
 export function ProjectCard({ project, delay = 0 }: { project: Project; delay?: number }) {
   return (
@@ -16,12 +16,16 @@ export function ProjectCard({ project, delay = 0 }: { project: Project; delay?: 
         <div className="relative aspect-[4/3] overflow-hidden md:aspect-[16/11]">
           <img
             src={project.cover}
-            alt={`${project.name} — ${project.category} presentation mockup`}
+            alt={
+              hasRealWork(project)
+                ? `${project.name} — ${project.category} brand identity`
+                : `${project.name} — ${project.category} presentation mockup`
+            }
             width={1536}
             height={960}
             loading="lazy"
             decoding="async"
-            className="h-full w-full scale-[1.02] object-cover transition-transform duration-[1.4s] ease-out group-hover:scale-110"
+            className={`h-full w-full scale-[1.02] object-cover transition-transform ${project.coverPortrait ? "object-top" : ""} duration-[1.4s] ease-out group-hover:scale-110`}
           />
           <div className="bg-fade-b absolute inset-0" aria-hidden />
           <div
@@ -30,8 +34,15 @@ export function ProjectCard({ project, delay = 0 }: { project: Project; delay?: 
           />
 
           <div className="absolute inset-x-5 top-5 flex items-start justify-between gap-3 md:inset-x-7 md:top-7">
-            <span className="rounded-full glass px-3 py-1.5 font-heading text-xs uppercase tracking-[0.15em]">
-              {project.category}
+            <span className="flex flex-wrap gap-2">
+              <span className="rounded-full glass px-3 py-1.5 font-heading text-xs uppercase tracking-[0.15em]">
+                {project.category}
+              </span>
+              {hasRealWork(project) && (
+                <span className="rounded-full bg-primary px-3 py-1.5 font-heading text-xs font-semibold uppercase tracking-[0.15em] text-primary-foreground">
+                  Real work
+                </span>
+              )}
             </span>
             <span className="font-heading text-sm text-foreground/80">{project.index}</span>
           </div>
@@ -83,7 +94,8 @@ export function Work() {
         </div>
 
         <p className="mt-10 text-center text-xs text-muted-foreground">
-          Visuals shown are presentation mockups for illustration.
+          Projects tagged “Real work” show actual client designs; other visuals are presentation
+          mockups for illustration.
         </p>
       </div>
     </section>
