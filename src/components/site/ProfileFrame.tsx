@@ -1,13 +1,14 @@
+import avatar from "@/assets/umer-3d-avatar.jpg.asset.json";
 import { cn } from "@/lib/utils";
 
 type Props = {
-  /** Pass a real portrait here once available; until then an elegant placeholder is shown. */
+  /** Defaults to Umer's own 3D avatar. */
   src?: string;
   className?: string;
   priority?: boolean;
 };
 
-export function ProfileFrame({ src, className, priority }: Props) {
+export function ProfileFrame({ src = avatar.url, className, priority }: Props) {
   return (
     <figure
       className={cn(
@@ -20,8 +21,10 @@ export function ProfileFrame({ src, className, priority }: Props) {
         {src ? (
           <img
             src={src}
-            alt="Portrait of Umer Shahzad"
-            className="h-full w-full object-cover"
+            alt="3D cartoon portrait of Umer Shahzad"
+            width={600}
+            height={800}
+            className="h-full w-full object-cover object-top transition-transform duration-[1.4s] ease-out group-hover:scale-105"
             loading={priority ? "eager" : "lazy"}
           />
         ) : (

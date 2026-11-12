@@ -70,19 +70,19 @@ export function SiteHeader() {
           <span className="font-display text-lg font-extrabold uppercase tracking-tight">
             Umer<span className="text-primary">.</span>
           </span>
-          <span className="hidden font-heading text-xs text-muted-foreground transition-colors group-hover:text-primary sm:inline">
+          <span className="hidden font-heading text-xs text-muted-foreground transition-colors group-hover:text-primary xl:inline">
             creative.by.umer06
           </span>
         </Link>
 
-        <ul className="hidden items-center gap-1 lg:flex">
+        <ul className="hidden items-center gap-0.5 md:flex lg:gap-1">
           {navItems.map((item) => (
             <li key={item.id}>
               <Link
                 to="/"
                 hash={item.id}
                 className={cn(
-                  "relative rounded-full px-4 py-2 font-heading text-sm transition-colors",
+                  "relative rounded-full px-3 py-2 font-heading text-sm transition-colors lg:px-4",
                   active === item.id
                     ? "text-foreground"
                     : "text-muted-foreground hover:text-foreground",
@@ -98,7 +98,7 @@ export function SiteHeader() {
         </ul>
 
         <div className="flex items-center gap-2">
-          <Button asChild variant="hero" size="pill" className="hidden sm:inline-flex">
+          <Button asChild variant="hero" size="pill" className="hidden lg:inline-flex">
             <Link to="/" hash="contact">
               Let's Collaborate
               <ArrowCircle />
@@ -107,7 +107,7 @@ export function SiteHeader() {
           <button
             type="button"
             onClick={() => setOpen((o) => !o)}
-            className="grid h-11 w-11 place-items-center rounded-full border border-border bg-surface text-foreground lg:hidden"
+            className="grid h-11 w-11 place-items-center rounded-full border border-border bg-surface text-foreground md:hidden"
             aria-expanded={open}
             aria-controls="mobile-menu"
             aria-label={open ? "Close menu" : "Open menu"}
@@ -120,7 +120,7 @@ export function SiteHeader() {
       <div
         id="mobile-menu"
         className={cn(
-          "fixed inset-x-4 top-24 rounded-3xl glass p-6 shadow-soft transition-all duration-500 lg:hidden",
+          "fixed inset-x-4 top-24 rounded-3xl glass p-6 shadow-soft transition-all duration-500 md:hidden",
           open
             ? "pointer-events-auto translate-y-0 opacity-100"
             : "pointer-events-none -translate-y-4 opacity-0",

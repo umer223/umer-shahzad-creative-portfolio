@@ -1,6 +1,7 @@
 import crazyBiteCover from "@/assets/work/crazy-bite-cover.jpg";
 import crazyBiteSocial from "@/assets/work/crazy-bite-social.jpg";
 import crazyBiteWebsite from "@/assets/work/crazy-bite-website.jpg";
+import gelaniBoard from "@/assets/work/gelani-mart-brand-identity-board.png.asset.json";
 import gelaniCover from "@/assets/work/gelani-mart-cover.jpg";
 import gelaniSignage from "@/assets/work/gelani-mart-signage.jpg";
 import gelaniStationery from "@/assets/work/gelani-mart-stationery.jpg";
@@ -11,7 +12,8 @@ import rmsCover from "@/assets/work/rms-beauty-cover.jpg";
 import rmsSocial from "@/assets/work/rms-beauty-social.jpg";
 import rmsPackaging from "@/assets/work/rms-beauty-packaging.jpg";
 
-export type GalleryImage = { src: string; alt: string; caption: string };
+/** `real` marks an actual client deliverable, as opposed to an illustrative mockup. */
+export type GalleryImage = { src: string; alt: string; caption: string; real?: boolean };
 
 export type Project = {
   slug: string;
@@ -23,6 +25,8 @@ export type Project = {
   summary: string;
   showcase: string[];
   cover: string;
+  /** A tall cover (e.g. a full brand board): cards crop from the top, the case study shows it whole. */
+  coverPortrait?: boolean;
   gallery: GalleryImage[];
 };
 
@@ -32,9 +36,9 @@ export const projects: Project[] = [
     index: "01",
     name: "Crazy Bite",
     category: "Fast Food Restaurant",
-    services: ["Brand Identity Design", "Website Development"],
+    services: ["Brand Identity Design", "Web Development"],
     summary:
-      "A bold, appetite-driven identity and website for a fast food restaurant — built to feel loud, warm and instantly recognisable across packaging, social and the web.",
+      "A bold, appetite-driven identity and website for a fast food restaurant — built to feel loud, warm and instantly recognizable across packaging, social and the web.",
     showcase: [
       "Logo and visual identity",
       "Restaurant branding",
@@ -60,21 +64,28 @@ export const projects: Project[] = [
     category: "Retail / Mart",
     services: ["Brand Identity Design"],
     summary:
-      "A clean, trustworthy retail identity system — logo, colours and typography designed to work everywhere from storefront signage to shopping bags and receipts.",
+      "A clean, trustworthy retail identity system — logo, colors and typography designed to work everywhere from storefront signage to shopping bags and receipts.",
     showcase: [
       "Logo presentation",
-      "Brand colours and typography",
+      "Brand colors and typography",
       "Visual identity applications",
       "Realistic brand mockups",
     ],
-    cover: gelaniCover,
+    cover: gelaniBoard.url,
+    coverPortrait: true,
     gallery: [
+      {
+        src: gelaniBoard.url,
+        alt: "Gelani Mart brand identity board with logo system, color palette, typography, brand personality and pattern elements",
+        caption: "Brand identity board",
+        real: true,
+      },
       { src: gelaniCover, alt: "Retail bags and cards mockup", caption: "Identity applications" },
       { src: gelaniSignage, alt: "Storefront signage mockup", caption: "Storefront signage" },
       {
         src: gelaniStationery,
-        alt: "Stationery and colour swatches",
-        caption: "Colours & stationery",
+        alt: "Stationery and color swatches",
+        caption: "Colors & stationery",
       },
     ],
   },
@@ -83,7 +94,7 @@ export const projects: Project[] = [
     index: "03",
     name: "Rehman Hotel",
     category: "Hospitality",
-    services: ["Social Media Management", "Website Development"],
+    services: ["Social Media Management", "Web Development"],
     summary:
       "A refined digital presence for a hotel — consistent social media creatives paired with a website that presents rooms and hospitality with warmth and clarity.",
     showcase: [
@@ -126,5 +137,7 @@ export const projects: Project[] = [
     ],
   },
 ];
+
+export const hasRealWork = (p: Project) => p.gallery.some((g) => g.real);
 
 export const getProject = (slug: string) => projects.find((p) => p.slug === slug);

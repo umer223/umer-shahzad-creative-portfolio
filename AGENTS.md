@@ -34,3 +34,4 @@ use the editor.
 - Portfolio content (projects, contact constants) lives in `src/data/` and `src/lib/contact.ts`; sections read from there so copy changes happen in one place.
 - Home is one scrolling page of sections (`src/components/sections/`) linked by hash; each project gets its own `/work/$slug` route for shareable case-study metadata.
 - The contact form has no backend: it validates with zod and opens WhatsApp with the enquiry pre-filled, because no email address exists to send to.
+- Clickable boxes (services, skills, About highlights) route through `TargetLink` with a `LinkTarget` from `src/data/targets.ts`, so each box points at either a `/work/$slug` page or a home section hash in one typed place.

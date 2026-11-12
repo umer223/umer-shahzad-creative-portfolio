@@ -202,7 +202,7 @@ export function Contact() {
 
               <div className="mt-8 flex flex-col-reverse items-start justify-between gap-4 sm:flex-row sm:items-center">
                 <p className="text-xs text-muted-foreground">
-                  Sends your enquiry straight to my WhatsApp.
+                  Sends your inquiry straight to my WhatsApp.
                 </p>
                 <Button type="submit" variant="hero" size="pill" className="w-full sm:w-auto">
                   Send Message

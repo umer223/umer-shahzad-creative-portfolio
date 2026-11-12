@@ -9,7 +9,7 @@ const marquee = [
   "Brand Identity",
   "Social Media Design",
   "Website Design",
-  "Website Development",
+  "Web Development",
   "Video Editing",
 ];
 
@@ -60,7 +60,7 @@ export function Hero() {
             style={d(450)}
           >
             Graphic Designer <span className="text-muted-foreground">|</span> Brand Identity
-            Designer <span className="text-muted-foreground">|</span> Website Developer
+            Designer <span className="text-muted-foreground">|</span> Web Developer
           </p>
 
           <p

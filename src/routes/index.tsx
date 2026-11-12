@@ -10,7 +10,7 @@ import { Work } from "@/components/sections/Work";
 
 const title = "Umer Shahzad — Graphic & Brand Identity Designer | creative.by.umer06";
 const description =
-  "Umer Shahzad is a graphic designer, brand identity designer, social media designer and website developer working with local and international clients.";
+  "Umer Shahzad is a graphic designer, brand identity designer, social media designer and web developer working with local and international clients.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
