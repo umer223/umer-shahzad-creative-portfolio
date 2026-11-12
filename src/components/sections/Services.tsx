@@ -27,13 +27,13 @@ const services: { title: string; text: string; icon: LucideIcon; target: LinkTar
     title: "Logo & Brand Identity",
     text: "Unique visual identities that create memorable brand experiences.",
     icon: Shapes,
-    target: toProject("gelani-mart", "Gelani Mart"),
+    target: toProject("crazy-bite", "Crazy Bite"),
   },
   {
     title: "Social Media Post Design",
     text: "Engaging, consistent and premium social media creatives.",
     icon: Megaphone,
-    target: toProject("rms-beauty-cream", "RMS Beauty"),
+    target: toProject("crazy-bite", "Crazy Bite"),
   },
   {
     title: "Social Media Management",
