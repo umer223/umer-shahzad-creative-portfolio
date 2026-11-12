@@ -155,7 +155,7 @@ function CaseStudy() {
           ) : (
             <img
               src={project.cover}
-              alt={`${project.name} presentation mockup`}
+              alt={project.gallery[0]?.alt ?? `${project.name} presentation mockup`}
               width={1536}
               height={960}
               className="aspect-[16/9] w-full object-cover transition-transform duration-[1.4s] group-hover:scale-105"
