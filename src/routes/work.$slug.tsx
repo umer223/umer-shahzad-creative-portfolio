@@ -192,7 +192,7 @@ function CaseStudy() {
               <Reveal
                 key={g.caption}
                 delay={i * 120}
-                className={i === 0 ? "sm:col-span-2" : undefined}
+                className={i === 0 && !g.portrait ? "sm:col-span-2" : undefined}
               >
                 <button
                   type="button"
@@ -207,7 +207,11 @@ function CaseStudy() {
                     height={960}
                     loading="lazy"
                     decoding="async"
-                    className="aspect-[16/10] w-full object-cover transition-transform duration-[1.4s] group-hover:scale-105"
+                    className={
+                      g.portrait
+                        ? "aspect-[2/3] w-full bg-surface p-5 object-contain transition-transform duration-[1.4s] group-hover:scale-[1.03]"
+                        : "aspect-[16/10] w-full object-cover transition-transform duration-[1.4s] group-hover:scale-105"
+                    }
                   />
                   <span className="absolute bottom-4 left-4 rounded-full glass px-3 py-1.5 font-heading text-xs">
                     {g.caption}

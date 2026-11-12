@@ -3,7 +3,6 @@ import crazyBiteHighlights from "@/assets/work/crazy-bite-story-highlights.png.a
 import crazyBiteLogo from "@/assets/work/crazy-bite-primary-logo.png.asset.json";
 import crazyBiteProfile from "@/assets/work/crazy-bite-social-profile.png.asset.json";
 import crazyBiteCover from "@/assets/work/crazy-bite-cover.jpg";
-import crazyBiteSocial from "@/assets/work/crazy-bite-social.jpg";
 import crazyBiteWebsite from "@/assets/work/crazy-bite-website.jpg";
 import gelaniBoard from "@/assets/work/gelani-mart-brand-identity-board.png.asset.json";
 import gelaniCover from "@/assets/work/gelani-mart-cover.jpg";
