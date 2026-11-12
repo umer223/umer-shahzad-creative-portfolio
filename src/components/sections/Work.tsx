@@ -28,6 +28,12 @@ export function ProjectCard({ project, delay = 0 }: { project: Project; delay?: 
             className={`h-full w-full scale-[1.02] object-cover transition-transform ${project.coverPortrait ? "object-top" : ""} duration-[1.4s] ease-out group-hover:scale-110`}
           />
           <div className="bg-fade-b absolute inset-0" aria-hidden />
+          {project.coverPortrait && (
+            <div
+              className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-background/10"
+              aria-hidden
+            />
+          )}
           <div
             className="absolute inset-0 bg-background/0 transition-colors duration-700 group-hover:bg-background/30"
             aria-hidden
