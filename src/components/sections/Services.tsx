@@ -41,7 +41,7 @@ const services: { title: string; text: string; icon: LucideIcon }[] = [
   },
   {
     title: "Web Development",
-    text: "Functional, responsive and professional website development.",
+    text: "Functional, responsive and professional web development.",
     icon: Code2,
   },
   {

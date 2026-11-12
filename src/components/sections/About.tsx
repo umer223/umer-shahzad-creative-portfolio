@@ -49,7 +49,7 @@ export function About() {
               <p className="mt-6 text-base leading-relaxed text-muted-foreground md:text-lg">
                 My focus is on creating meaningful visual identities, engaging social media content
                 and professional digital experiences that help businesses stand out. I combine
-                graphic design, branding, social media and website development — so your brand looks
+                graphic design, branding, social media and web development — so your brand looks
                 and works consistently everywhere.
               </p>
             </Reveal>

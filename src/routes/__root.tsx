@@ -87,14 +87,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         name: "description",
         content:
-          "Portfolio of Umer Shahzad — graphic design, brand identity, social media and website development.",
+          "Portfolio of Umer Shahzad — graphic design, brand identity, social media and web development.",
       },
       { name: "author", content: "Umer Shahzad" },
       { property: "og:title", content: "Umer Shahzad — creative.by.umer06" },
       {
         property: "og:description",
         content:
-          "Portfolio of Umer Shahzad — graphic design, brand identity, social media and website development.",
+          "Portfolio of Umer Shahzad — graphic design, brand identity, social media and web development.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
