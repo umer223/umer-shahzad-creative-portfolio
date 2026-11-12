@@ -1,3 +1,7 @@
+import crazyBiteBoard from "@/assets/work/crazy-bite-brand-identity-board.png.asset.json";
+import crazyBiteHighlights from "@/assets/work/crazy-bite-story-highlights.png.asset.json";
+import crazyBiteLogo from "@/assets/work/crazy-bite-primary-logo.png.asset.json";
+import crazyBiteProfile from "@/assets/work/crazy-bite-social-profile.png.asset.json";
 import crazyBiteCover from "@/assets/work/crazy-bite-cover.jpg";
 import crazyBiteSocial from "@/assets/work/crazy-bite-social.jpg";
 import crazyBiteWebsite from "@/assets/work/crazy-bite-website.jpg";
@@ -13,7 +17,14 @@ import rmsSocial from "@/assets/work/rms-beauty-social.jpg";
 import rmsPackaging from "@/assets/work/rms-beauty-packaging.jpg";
 
 /** `real` marks an actual client deliverable, as opposed to an illustrative mockup. */
-export type GalleryImage = { src: string; alt: string; caption: string; real?: boolean };
+export type GalleryImage = {
+  src: string;
+  alt: string;
+  caption: string;
+  real?: boolean;
+  /** A tall image (e.g. a brand board): shown whole on a surface instead of cropped. */
+  portrait?: boolean;
+};
 
 export type Project = {
   slug: string;
@@ -36,24 +47,44 @@ export const projects: Project[] = [
     index: "01",
     name: "Crazy Bite",
     category: "Fast Food Restaurant",
-    services: ["Brand Identity Design", "Web Development"],
+    services: ["Brand Identity Design", "Social Media Design", "Web Development"],
     summary:
-      "A bold, appetite-driven identity and website for a fast food restaurant — built to feel loud, warm and instantly recognizable across packaging, social and the web.",
+      "A bold, appetite-driven identity for a fast food brand — primary logo, full brand board and Instagram story highlights, built to feel loud, warm and instantly recognizable across packaging, social and the web.",
     showcase: [
-      "Logo and visual identity",
-      "Restaurant branding",
-      "Social media designs",
+      "Primary logo presentation",
+      "Brand identity board: colors, typography, mockups",
+      "Instagram story highlight icons",
+      "Social media post designs",
       "Website screenshots",
-      "Branding mockups",
     ],
-    cover: crazyBiteCover,
+    cover: crazyBiteLogo.url,
     gallery: [
-      { src: crazyBiteCover, alt: "Takeaway packaging mockup", caption: "Packaging & branding" },
       {
-        src: crazyBiteSocial,
-        alt: "Social media grid on a phone",
-        caption: "Social media designs",
+        src: crazyBiteLogo.url,
+        alt: "Crazy Bite primary logo: bubble lettering wearing a chef hat with red and yellow swooshes on black, tagline Every Bite Is Craving",
+        caption: "Primary logo",
+        real: true,
       },
+      {
+        src: crazyBiteBoard.url,
+        alt: "Crazy Bite brand identity board with logo system, color palette, typography, brand personality and mockups",
+        caption: "Brand identity board",
+        real: true,
+        portrait: true,
+      },
+      {
+        src: crazyBiteHighlights.url,
+        alt: "Instagram story highlight icon set: Our Story, Menu, Reviews, Branches, Offers, Events, Contact, Delivery and Behind the Fire",
+        caption: "Story highlights",
+        real: true,
+      },
+      {
+        src: crazyBiteProfile.url,
+        alt: "Instagram profile mockup on a phone at a restaurant table surrounded by branded cups and boxes",
+        caption: "Social media posts",
+        real: true,
+      },
+      { src: crazyBiteCover, alt: "Takeaway packaging mockup", caption: "Packaging & branding" },
       { src: crazyBiteWebsite, alt: "Restaurant website on a laptop", caption: "Website" },
     ],
   },
